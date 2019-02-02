@@ -1,0 +1,23 @@
+{
+  "name": "testcafe-e2e-sample",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "testcafe": "^0.23.3",
+    "testcafe-reporter-xunit": "^2.1.0"
+  },
+  "scripts": {
+    "test:chrome": "testcafe chrome tests/features/**/*.js -Ss screenshot --reporter xunit:report/res.xml",
+    "test:chrome:headless": "testcafe 'chrome:headless --no-sandbox' tests/features/**/*.js -Ss screenshot --reporter xunit:report/res.xml",
+    "test:chromium": "testcafe chromium tests/features/**/*.js -Ss screenshot  --reporter xunit:report/res.xml",
+    "test:chromium:headless": "testcafe chromium:headless tests/features/**/*.js -Ss screenshot --reporter xunit:report/res.xml",
+    "test:safari": "testcafe safari tests/features/**/*.js -Ss screenshot --reporter  xunit:report/res.xml",
+    "test:firefox": "testcafe firefox tests/features/**/*.js -Ss screenshot --reporter  xunit:report/res.xml",
+    "test:firefox:headless": "testcafe firefox:headless tests/features/**/*.js -Ss screenshot --reporter  xunit:report/res.xml",
+    "test:edge": "testcafe edge tests/features/**/*.js -Ss screenshot --reporter  xunit:report/res.xml",
+    "test:ie": "testcafe ie tests/features/**/*.js -Ss screenshot --reporter  xunit:report/res.xml",
+    "test:all": "testcafe all tests/features/**/*.js -Ss screenshot --reporter  xunit:report/res.xml",
+    "test:all:headless": "testcafe 'firefox:headless,chrome:headless --no-sandbox' tests/features/**/*.js -Ss screenshot --reporter xunit:report/res.xml"
+  },
+  "devDependencies": {}
+}
