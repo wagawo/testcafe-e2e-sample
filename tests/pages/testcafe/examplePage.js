@@ -1,8 +1,8 @@
 import { Selector, t } from 'testcafe';
 
-// fixture `TestCafe Official`
-//   .page `https://devexpress.github.io/testcafe/example/`
-
+/**
+ * TestCafe サンプルページ
+ */
 export default class ExamplePage {
   constructor() {
     this.url = 'https://devexpress.github.io/testcafe/example/';
