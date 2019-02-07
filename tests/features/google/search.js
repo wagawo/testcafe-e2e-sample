@@ -10,11 +10,11 @@ fixture`googleSearch`.page(topPage.url);
  * Google検索→検索結果表示->詳細クリック
  */
 test('Google検索', async (t) => {
-  const searchWord = 'UNITRUST';
+  const searchWord = 'Example Domain';
   await topPage.search(searchWord);
   await listPage.showDetail(searchWord);
   const actualUrl = ClientFunction(() => window.location.href);
-  const expectedUrl = 'https://www.unitrust.co.jp/';
+  const expectedUrl = 'https://example.com/';
   await t.takeScreenshot();
   await t.expect(actualUrl()).eql(expectedUrl);
 });
